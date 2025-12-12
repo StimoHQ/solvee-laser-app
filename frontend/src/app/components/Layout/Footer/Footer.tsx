@@ -34,10 +34,10 @@ const Footer = () => {
 				>
 					<div className={clsx("flex", "flex-col", "lg:gap-0", "gap-5")}>
 						<p className={clsx("text-[12px]", "text-secondary/80", "grow-underline")}>
-							<Link href={`${APP_URL}/term-of-use`}>Пользовательское соглашение</Link>
+							<Link href="/term-of-use">Пользовательское соглашение</Link>
 						</p>
 						<p className={clsx("text-[12px]", "text-secondary/80", "grow-underline")}>
-							<Link href={`${APP_URL}/privacy-policy`}>Политика конфиденциальности</Link>
+							<Link href="/privacy-policy">Политика конфиденциальности</Link>
 						</p>
 					</div>
 					<div>
