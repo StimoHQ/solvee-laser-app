@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { questions } from "@/app/data/questions";
 import { SingleQuestion } from "@/Components/Home/FAQ/SingleQuestion";
-import { APP_DOMEN } from "@/app/data/constants";
 
 const Faq = () => {
 	return (

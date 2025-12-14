@@ -2,7 +2,7 @@ services:
   frontend:
     build:
       context: ./frontend # папка, где лежит проект NextJS
-      dockerfile: DockerFile # имя Dockerfile внутри frontend
+      dockerfile: DockerFile.classic # имя Dockerfile внутри frontend
     container_name: solvee-laser-frontend
     env_file:
       - ./frontend/.env.production # подключаем env файл

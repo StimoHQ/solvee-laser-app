@@ -44,9 +44,3 @@ const Pricing = () => {
 };
 
 export default Pricing;
-
-//className={clsx("xl:col-span-4", "md:col-span-6", "col-span-12")}
-
-// <div className={clsx("pt-4")}>
-// 	<PriceDialogButton />
-// </div>

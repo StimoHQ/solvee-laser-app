@@ -22,20 +22,20 @@ export const metadata: Metadata = {
 	generator: "NextJS",
 	icons: {
 		icon: [
-			{ url: "/icons/favicon.ico" },
-			{ url: "/icons/icon-16x16.png", sizes: "16x16", type: "image/png" },
-			{ url: "/icons/icon-32x32.png", sizes: "32x32", type: "image/png" },
+			{ url: `${APP_URL}/icons/favicon.ico` },
+			{ url: `${APP_URL}/icons/icon-16x16.png`, sizes: "16x16", type: "image/png" },
+			{ url: `${APP_URL}/icons/icon-32x32.png`, sizes: "32x32", type: "image/png" },
 		],
-		shortcut: "/icons/favicon.ico",
-		apple: "/icons/icon-256x256.png",
+		shortcut: `${APP_URL}/icons/favicon.ico`,
+		apple: `${APP_URL}/icons/icon-256x256.png`,
 		other: [
 			{
 				rel: "touch-icon",
-				url: "/icons/icon-256x256.png",
+				url: `${APP_URL}/icons/icon-256x256.png`,
 				sizes: "256x256",
 				type: "image/png",
 			},
-			{ rel: "mask-icon", url: "/icons/icon.svg" },
+			{ rel: "mask-icon", url: `${APP_URL}/icons/icon.svg` },
 		],
 	},
 	openGraph: {

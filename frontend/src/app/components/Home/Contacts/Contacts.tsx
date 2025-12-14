@@ -6,8 +6,8 @@ import clsx from "clsx";
 const Contacts = () => {
 	return (
 		<section
-			id="contacts"
 			aria-label="Контактная информация"
+			id="contacts"
 			className={clsx("relative", "overflow-x-hidden", "bg-primary", "scroll-mt-15")}
 		>
 			<div className={clsx("container", "mx-auto", "lg:max-w-xl", "sm:px-4", "px-8")}>
