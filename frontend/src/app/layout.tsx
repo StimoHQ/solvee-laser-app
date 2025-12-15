@@ -22,12 +22,12 @@ export const metadata: Metadata = {
 	generator: "NextJS",
 	icons: {
 		icon: [
-			{ url: `${APP_URL}/icons/favicon.ico` },
-			{ url: `${APP_URL}/icons/icon-16x16.png`, sizes: "16x16", type: "image/png" },
-			{ url: `${APP_URL}/icons/icon-32x32.png`, sizes: "32x32", type: "image/png" },
+			{ rel: "icon", url: `${APP_URL}/icons/favicon.ico`, type: "image/x-icon" },
+			{ rel: "icon", url: `${APP_URL}/icons/icon-16x16.png`, sizes: "16x16", type: "image/png" },
+			{ rel: "icon", url: `${APP_URL}/icons/icon-32x32.png`, sizes: "32x32", type: "image/png" },
 		],
-		shortcut: `${APP_URL}/icons/favicon.ico`,
-		apple: `${APP_URL}/icons/icon-256x256.png`,
+		shortcut: { rel: "shortcut icon", url: `${APP_URL}/icons/favicon.ico`, type: "image/x-icon" },
+		apple: { rel: "apple-touch-icon", url: `${APP_URL}/icons/icon-256x256.png`, sizes: "256x256", type: "image/png" },
 		other: [
 			{
 				rel: "touch-icon",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 				sizes: "256x256",
 				type: "image/png",
 			},
-			{ rel: "mask-icon", url: `${APP_URL}/icons/icon.svg` },
+			{ rel: "mask-icon", url: `${APP_URL}/icons/icon.svg`, type: "image/svg+xml" },
 		],
 	},
 	openGraph: {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 		type: "website",
 		images: [
 			{
-				url: "/og-image.png",
+				url: `${APP_URL}/og-image.png`,
 				width: 1200,
 				height: 605,
 				type: "image/png",

@@ -4,6 +4,8 @@ import { features } from "@/app/data/features";
 import { pricing } from "@/app/data/pricing";
 import { questions } from "@/app/data/questions";
 import { formatRuPhone } from "@/app/lib/formatRuPhone";
+import Script from "next/script";
+import { Article } from "schema-dts";
 
 export const JsonLd = () => {
 	const faqEntities = questions.map((q) => ({
@@ -14,6 +16,40 @@ export const JsonLd = () => {
 			text: q.answer,
 		},
 	}));
+
+	const forYandex: Article[] = [
+		{
+			"@type": "Article",
+			"@id": "main",
+			headline: `${SEO.SITE_DESCRIPTION}`,
+			url: APP_URL,
+			author: {
+				"@type": "Person",
+				name: FIO,
+				knows: [TELEGRAM_LINK, DIKIDI_LINK, WHATSUP_LINK],
+			},
+			about: SEO.SITE_KEYWORDS,
+			mainEntity: {
+				"@type": "WebPage",
+			},
+		},
+		{
+			"@type": "Article",
+			"@id": "features",
+			url: `${APP_URL}/#features`,
+		},
+		{
+			"@type": "Article",
+			"@id": "pricing",
+			url: `${APP_URL}/#pricing`,
+		},
+		{
+			"@type": "Article",
+			"@id": "questions",
+			url: `${APP_URL}/#questions`,
+			text: faqEntities.map((f) => `Q: ${f.name} A: ${f.acceptedAnswer.text}`).join(" "),
+		},
+	];
 
 	const offers = pricing.flatMap((section) =>
 		section.cards.map((card) => ({
@@ -37,6 +73,7 @@ export const JsonLd = () => {
 	const jsonLd = {
 		"@context": "https://schema.org",
 		"@graph": [
+			...forYandex.map((a) => a),
 			{
 				"@type": "WebSite",
 				name: SEO.SITE_NAME,
@@ -102,10 +139,13 @@ export const JsonLd = () => {
 	};
 
 	return (
-		<script
+		<Script
+			id="json-ld"
 			type="application/ld+json"
-			dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-		/>
+			strategy="beforeInteractive"
+		>
+			{JSON.stringify(jsonLd)}
+		</Script>
 	);
 };
 
