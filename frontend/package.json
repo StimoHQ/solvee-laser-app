@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "npm-init-prod": "npm ci --omit=dev"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@iconify/react": "^6.0.2",
+    "@yandex/ymaps3-types": "^1.0.18280890",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "next": "^16.0.9",

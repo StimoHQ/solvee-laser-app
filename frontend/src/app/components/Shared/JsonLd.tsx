@@ -1,6 +1,6 @@
 import { ADDRESS, FIO, PHONE, TELEGRAM_LINK, WHATSUP_LINK, DIKIDI_LINK, APP_URL, SEO } from "@/app/data/constants";
 
-import { features } from "@/app/data/features";
+import { myFeatures } from "@/app/data/features";
 import { pricing } from "@/app/data/pricing";
 import { questions } from "@/app/data/questions";
 import { formatRuPhone } from "@/app/lib/formatRuPhone";
@@ -64,11 +64,12 @@ export const JsonLd = () => {
 		}))
 	);
 
-	const featureEntities = features.map((f) => ({
-		"@type": "PropertyValue",
-		name: f.text,
-		description: f.description,
-	}));
+	const featureEntities = myFeatures //В основную информацию
+		.map((f) => ({
+			"@type": "PropertyValue",
+			name: f.text,
+			description: f.description,
+		}));
 
 	const jsonLd = {
 		"@context": "https://schema.org",

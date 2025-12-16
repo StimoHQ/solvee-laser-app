@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="119.96195"
+   height="120.09587"
+   viewBox="0 0 119.96195 120.09587"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:export-filename="favicon.svg"
+   inkscape:export-xdpi="190.5"
+   inkscape:export-ydpi="190.5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="4.8245117"
+     inkscape:cx="-30.987592"
+     inkscape:cy="69.126167"
+     inkscape:window-width="3440"
+     inkscape:window-height="1369"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="119.96195"
+       height="120.09587"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <font
+       horiz-adv-x="1000"
+       id="font1"
+       horiz-origin-x="0"
+       horiz-origin-y="0"
+       vert-origin-x="512"
+       vert-origin-y="768"
+       vert-adv-y="1024">
+      <font-face
+         units-per-em="1000"
+         ascent="750"
+         cap-height="600"
+         x-height="400"
+         descent="200"
+         id="font-face1"
+         font-family="SVGFont 1" />
+      <missing-glyph
+         d="M0,0h1000v1000h-1000z"
+         id="missing-glyph1" />
+    </font>
+  </defs>
+  <g
+     id="layer1"
+     transform="matrix(7.5023463,0,0,7.5304031,-662.30537,-472.00735)">
+    <ellipse
+       style="fill:#d98abb;stroke-width:1.07319"
+       id="path7"
+       cx="96.274727"
+       cy="70.654289"
+       rx="7.9949622"
+       ry="7.9740663" />
+    <path
+       style="fill:#ffffff;stroke-width:1.20054"
+       id="path4"
+       d="m 99.592982,65.599662 c -0.830579,0.643956 -1.695926,1.270615 -2.476426,1.961975 -0.841278,0.778196 -1.796768,1.490057 -2.494463,2.375721 -0.433861,0.550761 -0.54397,0.752808 -0.914835,1.330801 -0.44816,0.900511 -0.829582,1.942604 -0.473389,2.92582 0.05504,0.152016 0.146947,0.291461 0.220421,0.437226 0.393368,0.510847 0.176317,0.272517 0.64952,0.716068 l 0.818947,-0.443346 0.324949,-0.204313 c 0.544538,-0.34239 0.399098,-0.257466 -0.213391,-0.762994 -0.0702,-0.1403 -0.253402,-0.334566 -0.305305,-0.481019 -0.343006,-0.967342 -0.595325,-1.65429 -0.148152,-2.533064 0.377624,-0.581537 0.478253,-0.766896 0.919331,-1.320962 0.701581,-0.881243 1.521487,-1.686567 2.364825,-2.460936 0.783265,-0.69022 1.584128,-1.363364 2.415516,-2.007944 z" />
+  </g>
+</svg>

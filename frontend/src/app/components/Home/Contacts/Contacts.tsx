@@ -15,11 +15,11 @@ const Contacts = () => {
 					Контакты
 				</h2>
 				<div className={clsx("grid", "grid-cols-12")}>
-					<div className={clsx("md:col-span-6", "col-span-12", "px-4", "md:py-0", "py-5")}>
+					<div className={clsx("xl:col-span-6", "col-span-12", "px-4", "xl:py-0", "py-5")}>
 						<p className={clsx("text-secondary/75", "text-base", "mb-2")}>Адрес</p>
 						<address className={clsx("text-secondary", "text-base", "not-italic")}>{ADDRESS}</address>
 					</div>
-					<div className={clsx("md:col-span-6", "col-span-12", "px-4", "md:py-0", "py-5")}>
+					<div className={clsx("xl:col-span-6", "col-span-12", "px-4", "xl:py-0", "py-5")}>
 						<p className={clsx("text-secondary/75", "text-base", "mb-2")}>Мастер</p>
 						<p className={clsx("text-secondary", "text-base")}>{FIO}</p>
 						<p className={clsx("text-secondary", "text-base")}>

@@ -4,7 +4,7 @@ export type FeatureType = {
 	description: string;
 };
 
-export const features: FeatureType[] = [
+const features: FeatureType[] = [
 	{
 		id: 1,
 		text: "Оборудование",
@@ -13,8 +13,7 @@ export const features: FeatureType[] = [
 	{
 		id: 2,
 		text: "Комфорт",
-		description:
-			"Современная система охлаждения (до -4 градусов), процедура проходит комфортно и безболезненно",
+		description: "Современная система охлаждения (до -4 градусов), процедура проходит комфортно и безболезненно",
 	},
 	{
 		id: 3,
@@ -34,3 +33,6 @@ export const features: FeatureType[] = [
 			"Кожа стала здоровой,Нет пигментации,Волосы мягкие их почти нет,Избавились от вросших волос,Нет раздаржения",
 	},
 ];
+
+export const myFeatures = features.filter((f) => f.id !== 5);
+export const featuresAfter = features.find((f) => f.id === 5);

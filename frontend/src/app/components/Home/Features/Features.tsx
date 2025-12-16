@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import MotionWrapper from "../../Shared/MotionWrapper";
-import { features } from "@/app/data/features";
+import { myFeatures, featuresAfter as features } from "@/app/data/features";
 import SingleFeature from "./SingleFeature";
 
 const Features = () => {
@@ -11,8 +11,7 @@ const Features = () => {
 		transition: { duration: 1, delay: 0.3 },
 	};
 
-	const myFeatures = features.filter((item) => item.id !== 5); //В основную информацию
-	const featuresAfter = features.find((item) => item.id === 5)?.description.split(",") || []; //дополнительно - другая верстка
+	const featuresAfter = features?.description.split(",") || [];
 
 	return (
 		<section
