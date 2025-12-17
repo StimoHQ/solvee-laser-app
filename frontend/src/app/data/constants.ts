@@ -19,7 +19,7 @@ export const APP_DOMEN = process.env.NEXT_PUBLIC_APP_DOMAIN as string;
 export const SEO = {
 	SITE_NAME: "Solvee Laser",
 	SITE_DESCRIPTION:
-		"Лазерная эпиляция в Екатеринбурге Академическом районе. 15% СКИДКА первое посещение! Диодный лазер: Безопасно, эффективно, комфортно. Работаю ТОЛЬКО на РЕЗУЛЬТАТ",
+		"Лазерная эпиляция в Екатеринбургe | 15% СКИДКА первое посещение | Работаю ТОЛЬКО на РЕЗУЛЬТАТ",
 	SITE_KEYWORDS: [
 		"Solvee Laser",
 		"лазерная эпиляция",
