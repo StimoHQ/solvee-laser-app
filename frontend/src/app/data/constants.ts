@@ -1,4 +1,4 @@
-import { YMapLocationRequest } from "@yandex/ymaps3-types";
+import { LngLat, YMapLocationRequest } from "@yandex/ymaps3-types";
 
 // Личная инофрмация
 export const ADDRESS = "г. Екатеринбург, ул. Академика Парина, 35/2, 4 этаж";
@@ -9,17 +9,18 @@ export const EMAIL = "solveelaser@yandex.ru";
 export const TELEGRAM_LINK = "https://t.me/solveelaser";
 export const WHATSUP_LINK = `https://wa.me/${PHONE}`;
 export const DIKIDI_LINK = "https://dikidi.net/1637735";
-//Приложение
-export const LOCATION: YMapLocationRequest = {
-	center: [60.508775, 56.782228], // starting position [lng, lat]
-	zoom: 17, // starting zoom
+//Яндекс карта
+export const LOCATION: LngLat = [60.50787, 56.78272];
+export const LOCATION_REQUEST: YMapLocationRequest = {
+	center: LOCATION, // starting position [lng, lat]
+	zoom: 14, // starting zoom
 };
+//Приложение
 export const APP_URL = process.env.NEXT_PUBLIC_APP_URL as string;
 export const APP_DOMEN = process.env.NEXT_PUBLIC_APP_DOMAIN as string;
 export const SEO = {
 	SITE_NAME: "Solvee Laser",
-	SITE_DESCRIPTION:
-		"Лазерная эпиляция в Екатеринбургe | 15% СКИДКА первое посещение | Работаю ТОЛЬКО на РЕЗУЛЬТАТ",
+	SITE_DESCRIPTION: "Лазерная эпиляция в Екатеринбургe | 15% СКИДКА первое посещение | Работаю ТОЛЬКО на РЕЗУЛЬТАТ",
 	SITE_KEYWORDS: [
 		"Solvee Laser",
 		"лазерная эпиляция",

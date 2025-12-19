@@ -7,7 +7,8 @@ import Header from "@/Components/Layout/Header/Header";
 import { GlobalEffects } from "@/Components/Shared/GlobalEffects";
 import { APP_URL, SEO } from "./data/constants";
 import JsonLd from "@/Components/Shared/JsonLd";
-import AnalyticProvider from "@/Components/Shared/AnalyticProvider";
+import AnalyticProvider from "@/Components/API/AnalyticProvider";
+import YandexMapLoader from "./components/API/YandexMap/YandexMapLoader";
 
 const anticva = localFont({
 	src: "../../public/fonts/Anticva.ttf",
@@ -72,6 +73,7 @@ export default function RootLayout({
 			data-scroll-behavior="smooth"
 		>
 			<head>
+				<YandexMapLoader />
 				<JsonLd />
 			</head>
 			<body className={anticva.className}>
