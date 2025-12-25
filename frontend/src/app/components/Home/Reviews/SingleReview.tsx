@@ -1,6 +1,7 @@
 "use client";
 
 import { AvitoSingleReviewType } from "@/app/data/api/Avito/getAvitoReviews";
+import formatDate from "@/app/lib/formatDate";
 import { Icon } from "@iconify/react";
 import clsx from "clsx";
 import { FC, useLayoutEffect, useRef, useState } from "react";
@@ -13,7 +14,7 @@ export const SingleReview: FC<Props> = ({ review }: Props) => {
 	const [isClamped, setIsClamped] = useState(false); // Нужна ли кнопка "далее"
 	const textRef = useRef<HTMLParagraphElement>(null);
 
-	const createdDate = new Intl.DateTimeFormat("ru-RU").format(new Date(review.createdAt * 1000));
+	const createdDate = formatDate(review.createdAt);
 
 	useLayoutEffect(() => {
 		const el = textRef.current;
