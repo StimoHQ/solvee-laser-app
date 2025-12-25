@@ -60,14 +60,13 @@ const avitoGetToken = async (): Promise<AvitoTokenType> => {
 
 		return token;
 	} catch (error) {
+		console.error("Error get token for reviews");
 		return;
 	}
 };
 
 const getAvitoReviews = async (): Promise<AvitoReviewsType> => {
 	if (!avitoIsOn()) return;
-
-	console.info("Avito reviews is on");
 
 	const token: AvitoTokenType = await avitoGetToken();
 
@@ -91,8 +90,11 @@ const getAvitoReviews = async (): Promise<AvitoReviewsType> => {
 
 		if (!response.ok) return;
 
+		console.info("Fatched new Reviews");
+
 		return await response.json();
 	} catch (error) {
+		console.error("Error Fatching Reviews");
 		return;
 	}
 };

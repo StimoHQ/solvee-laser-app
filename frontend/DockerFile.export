@@ -15,8 +15,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
 
 RUN npm run build
 
@@ -30,6 +30,8 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.env.example ./.env.example
 COPY --from=builder /app/package.json  ./package.json
 COPY --from=builder /app/package-lock.json  ./package-lock.json
+COPY --from=builder /app/next.config.ts  ./next.config.ts
+COPY --from=builder /app/postcss.config.mjs  ./postcss.config.mjs
 
 FROM scratch AS export
 COPY --from=runner /app /
