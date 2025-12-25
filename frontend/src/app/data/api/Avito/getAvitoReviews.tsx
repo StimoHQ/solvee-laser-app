@@ -19,17 +19,23 @@ type AvitoReviewsRequestType = {
 	limit: string;
 };
 
+export type AvitoSingleReviewType = {
+	id: number;
+	sender: { name: string };
+	score: number;
+	text: string;
+	createdAt: number; //Unix TimeStamp создания отзыва
+	stage: "done" | "fell_through" | "not_agree" | "not_communicate";
+	item: {
+		id: number;
+		title: string;
+	};
+};
+
 export type AvitoReviewsType =
 	| {
 			total: number;
-			reviews: {
-				id: number;
-				sender: { name: string };
-				score: number;
-				text: string;
-				createdAt: number; //Unix TimeStamp создания отзыва
-				stage: "done" | "fell_through" | "not_agree" | "not_communicate";
-			}[];
+			reviews: AvitoSingleReviewType[];
 	  }
 	| undefined;
 
@@ -65,7 +71,7 @@ const avitoGetToken = async (): Promise<AvitoTokenType> => {
 	}
 };
 
-const getAvitoReviews = async (): Promise<AvitoReviewsType> => {
+const getAvitoReviews = async (): Promise<AvitoSingleReviewType[] | undefined> => {
 	if (!avitoIsOn()) return;
 
 	const token: AvitoTokenType = await avitoGetToken();
@@ -74,7 +80,7 @@ const getAvitoReviews = async (): Promise<AvitoReviewsType> => {
 
 	const params: AvitoReviewsRequestType = {
 		offset: "0",
-		limit: "10",
+		limit: "15",
 	};
 
 	const requestParams = new URLSearchParams(params);
@@ -90,9 +96,17 @@ const getAvitoReviews = async (): Promise<AvitoReviewsType> => {
 
 		if (!response.ok) return;
 
-		console.info("Fatched new Reviews");
+		console.info("Fatching new Reviews");
 
-		return await response.json();
+		const responseJson: AvitoReviewsType = await response.json();
+
+		if (!responseJson) return;
+
+		let availableIds: number[] = [];
+
+		availableIds = (process.env.AVITO_AVAILABLE_ITEM_IDS as string).split(",").map((id) => Number(id));
+
+		return responseJson.reviews.filter((r) => r.score === 5 && r.stage === "done" && availableIds.includes(r.item.id));
 	} catch (error) {
 		console.error("Error Fatching Reviews");
 		return;

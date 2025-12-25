@@ -4,9 +4,9 @@ export type HeaderItem = {
 };
 
 const headerData: HeaderItem[] = [
-	{ label: "Обо мне", href: "/#features" },
 	{ label: "Цены", href: "/#pricing" },
 	{ label: "Вопросы", href: "/#questions" },
+	{ label: "Отзывы", href: "/#reviews" },
 	{ label: "Контакты", href: "/#contacts" },
 ];
 

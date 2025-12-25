@@ -10,7 +10,24 @@ const Contacts = () => {
 			id="contacts"
 			className={clsx("relative", "overflow-x-hidden", "bg-primary", "scroll-mt-15")}
 		>
-			<div className={clsx("container", "mx-auto", "lg:max-w-xl", "sm:px-4", "px-8")}>
+			<div
+				className={clsx(
+					"container",
+					"relative",
+					"mx-auto",
+					"lg:max-w-xl",
+					"sm:px-4",
+					"px-8",
+					"pt-10",
+					"before:content-['']",
+					"before:absolute",
+					"before:w-full",
+					"before:h-0.5",
+					"before:bg-white",
+					"before:left-0",
+					"before:top-0"
+				)}
+			>
 				<h2 className={clsx("md:text-5xl", "sm:text-4xl", "text-3xl", "font-semibold", "text-secondary", "pb-8")}>
 					Контакты
 				</h2>
